@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg tw-bg-default-background justify-content-center">
+  <div class="container-fluid">
+    <a class="navbar-brand tw-text-default-text">DonCarlos` Cats</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link tw-text-default-text">List All Cats</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link tw-text-default-text">Search Cats</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col text-right">
+      <div ngbDropdown display="dynamic" placement="bottom-right">
+        <button class="tw-bg-transparent tw-text-default-text " id="dropdownBasic1" ngbDropdownToggle>
+          <i class="mdi mdi-palette"></i>
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem (click)="changeTheme('light')">Light</button>
+          <button ngbDropdownItem (click)="changeTheme('dark')">Dark</button>
+        </div>
+      </div>
+    </div>
+    <!-- <button class="tw-text-default-text" (click)="changeTheme()">
+      <i class="mdi mdi-palette"></i>
+    </button> -->
+  </div>
+</nav>
