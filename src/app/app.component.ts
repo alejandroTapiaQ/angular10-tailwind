@@ -1,9 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Subject } from 'rxjs';
+import { AppService } from './app.service';
 import { takeUntil } from 'rxjs/operators';
 import { AppState } from './store/app.state';
-import { SetThemeAction, ThemeSatate } from './store/theme';
+import { SetListThemeAction, ThemeSatate } from './store/theme';
 import { ThemeService } from './themes/theme.service';
 
 @Component({
@@ -16,16 +17,16 @@ export class AppComponent implements OnInit, OnDestroy {
   private onDestroy$ = new Subject();
   constructor(
     private readonly store: Store<AppState>,
-    private readonly themeService: ThemeService
-  ) {
-    // this.store.select('themeReducer')
-    // .pipe(takeUntil(this.onDestroy$))
-    // .subscribe((state: ThemeSatate) => {
-    //   console.log(state);
-    // });
-  }
+    private readonly themeService: ThemeService,
+    private readonly appService: AppService
+  ) {}
 
   ngOnInit(): void {
+    this.appService.getListThemes()
+    .pipe(takeUntil(this.onDestroy$))
+    .subscribe((resp) => {
+      this.store.dispatch(new SetListThemeAction(resp));
+    });
     // setTimeout(() => {
 
     //   this.store.dispatch(new SetThemeAction('light'));

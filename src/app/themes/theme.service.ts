@@ -32,18 +32,8 @@ export class ThemeService {
       '--color-success': variables.success || '',
       '--color-info': variables.info || '',
       '--color-warning': variables.warning || '',
-      '--color-danger': variables.danger || '',
-      '--color-text-primary': variables.textPrimary || '',
-      '--color-text-secondary': variables.textSecondary || '',
-      '--color-text-success': variables.textSuccess || '',
-      '--color-text-info': variables.textInfo || '',
-      '--color-text-warning': variables.textWarning || '',
-      '--color-text-danger': variables.textDanger || '',
-      '--color-text-default': variables.defaultText || '',
-      '--background-light': variables.backgroundLight || '',
-      '--background-dark': variables.backgroundDark || '',
-      '--background-default': variables.backgroundDefault || '',
-      '--background-base': variables.backgroundBase || ''
+      '--color-error': variables.error || '',
+      '--color-main-text': variables.mainText || '',
     };
   }
 
