@@ -1,14 +1,14 @@
 <div class="card tw-bg-info tw-text-main-text">
   <div class="card-header tw-uppercase">
-    {{data.name}}
+    {{data?.name}}
   </div>
-  <img [src]="data?.image?.url"  class="tw-object-cover tw-h-48 tw-w-full">
+  <img [src]="data?.image?.url"  class="tw-object-cover tw-w-full" [ngClass]="{'tw-h-48': showDetailButton, 'tw-h-full': !showDetailButton}">
   <div class="card-body tw-object-cover tw-h-48 tw-w-full overflow-clip overflow-hidden">
     <h5 class="card-title">Description</h5>
     <!-- tw-break-all tw-h-20 -->
-    <p class="card-text tw-break-words tw-text-justify">{{data.description}}</p>
+    <p class="card-text tw-break-words tw-text-justify">{{data?.description}}</p>
   </div>
-  <div class="card-footer tw-text-center">
-    <a class="btn tw-bg-success tw-text-main-text">See Details</a>
+  <div class="card-footer tw-text-center" *ngIf="showDetailButton">
+    <button type="button" class="btn tw-bg-success tw-text-main-text" (click)="clickButton()">See Details</button>
   </div>
 </div>
