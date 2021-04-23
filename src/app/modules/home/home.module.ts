@@ -8,6 +8,7 @@ import { CardViewComponent } from './card-view/card-view.component';
 import { HomeService } from './home.service';
 import { DetailCatComponent } from './detail-cat/detail-cat.component';
 import { SearchCatComponent } from './search-cat/search-cat.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { SearchCatComponent } from './search-cat/search-cat.component';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    NgbAlertModule
+    NgbAlertModule,
+    FormsModule
   ],
   providers: [
     HomeService

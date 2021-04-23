@@ -31,7 +31,6 @@ export class DetailCatComponent implements OnInit, OnDestroy {
     this.homeService.getCat(catName)
       .pipe(takeUntil(this.onDestroy$))
       .subscribe((cat) => {
-        // console.log(cat)
         this.catData = cat;
       }, (err) => {
         console.error(err);

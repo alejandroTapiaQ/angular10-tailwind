@@ -16,10 +16,10 @@
         <button class="tw-bg-transparent tw-text-main-text " id="dropdownBasic1" ngbDropdownToggle>
           <i class="mdi mdi-palette"></i>
         </button>
-        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-          <button ngbDropdownItem (click)="changeTheme('base')">base</button>
-          <button ngbDropdownItem (click)="changeTheme('light')">Light</button>
-          <button ngbDropdownItem (click)="changeTheme('dark')">Dark</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="tw-bg-info">
+          <button class="tw-text-main-text hover:tw-bg-primary" ngbDropdownItem (click)="changeTheme('base')">base</button>
+          <button class="tw-text-main-text hover:tw-bg-primary" ngbDropdownItem (click)="changeTheme('light')">Light</button>
+          <button class="tw-text-main-text hover:tw-bg-primary" ngbDropdownItem (click)="changeTheme('dark')">Dark</button>
         </div>
       </div>
     </div>

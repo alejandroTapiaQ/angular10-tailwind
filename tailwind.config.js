@@ -14,7 +14,7 @@ module.exports = {
         success: 'var(--color-success)',
         info: 'var(--color-info)',
         warning: 'var(--color-warning)',
-        error: 'var(--color-danger)',
+        error: 'var(--color-error)',
         'main-text': 'var(--color-main-text)'
       },
     },
@@ -23,7 +23,7 @@ module.exports = {
     }),
   },
   variants: {
-    backgroundColor: ['active'],
+    // backgroundColor: ['active'],
     extend: {},
   },
   plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],

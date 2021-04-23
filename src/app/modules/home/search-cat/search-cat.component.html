@@ -1,1 +1,31 @@
-<p>search-cat works!</p>
+<div class="container">
+  <br />
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-8">
+      <form class="card card-sm tw-bg-transparent tw-border-1 tw-border-main-text">
+        <div class="card-body row no-gutters align-items-center">
+          <div class="col-auto">
+            <i class="fas fa-search h4 text-body"></i>
+          </div>
+          <!--end of col-->
+          <div class="col">
+            <input
+              class="form-control form-control-lg form-control-borderless tw-bg-info tw-placeholder-main-text tw-border-main-text tw-text-main-text"
+              [ngModelOptions]="{standalone: true}"
+              [(ngModel)]="searchText"
+              type="search" placeholder="Search topics or keywords">
+          </div>
+          <!--end of col-->
+          <div class="col-auto tw-content-center">
+            <button class="btn btn-lg tw-bg-success tw-text-main-text" type="button" (click)="searchCat()">Search</button>
+            <button *ngIf="catData" class="btn btn-lg tw-bg-info tw-text-main-text" type="button" (click)="cleanSearch()">Clean</button>
+          </div>
+          <!--end of col-->
+        </div>
+      </form>
+    </div>
+    <!--end of col-->
+  </div>
+  <br />
+  <app-card-view *ngIf="catData" [data]="catData"></app-card-view>
+</div>
