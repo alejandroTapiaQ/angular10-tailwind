@@ -17,14 +17,22 @@
           <i class="mdi mdi-palette"></i>
         </button>
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="tw-bg-info">
-          <button class="tw-text-main-text hover:tw-bg-primary" ngbDropdownItem (click)="changeTheme('base')">base</button>
+          <button class="tw-text-main-text hover:tw-bg-primary" ngbDropdownItem (click)="changeTheme('base')">Base</button>
           <button class="tw-text-main-text hover:tw-bg-primary" ngbDropdownItem (click)="changeTheme('light')">Light</button>
           <button class="tw-text-main-text hover:tw-bg-primary" ngbDropdownItem (click)="changeTheme('dark')">Dark</button>
         </div>
       </div>
     </div>
-    <!-- <button class="tw-text-text-black" (click)="changeTheme()">
-      <i class="mdi mdi-palette"></i>
-    </button> -->
+    <div class="col text-right" class="md:tw-hidden lg:tw-hidden">
+      <div ngbDropdown display="dynamic" placement="bottom-right">
+        <button class="tw-bg-transparent tw-text-main-text " id="dropdownBasic1" ngbDropdownToggle>
+          <i class="mdi mdi-dots-vertical"></i>
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="tw-bg-info">
+          <button class="tw-text-main-text hover:tw-bg-primary" ngbDropdownItem [routerLink]="['/home/top-cats']">List All Cats</button>
+          <button class="tw-text-main-text hover:tw-bg-primary" ngbDropdownItem [routerLink]="['/home/search-cats']">Search Cats</button>
+        </div>
+      </div>
+    </div>
   </div>
 </nav>

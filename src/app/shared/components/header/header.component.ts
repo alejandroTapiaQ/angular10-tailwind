@@ -9,7 +9,6 @@ import { SetThemeAction } from 'src/app/store/theme';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
   constructor(
     private readonly store: Store<AppState>,
   ) { }

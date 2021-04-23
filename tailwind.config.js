@@ -2,7 +2,7 @@ module.exports = {
   prefix: 'tw-',
   important: true,
   purge: {
-    enabled: false,
+    enabled: true,
     content: ['./index.html', './src/**/*.{vue,html,js,scss,ts,jsx,tsx}']
   },
   darkMode: false, // or 'media' or 'class'
