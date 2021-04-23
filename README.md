@@ -2,7 +2,7 @@
 
 This projects shows how can configure a project with  [TailwindCss ](https://tailwindcss.com/)
 
-- [Demo ](https://alejandrotapiaq.github.io/angular-10-tailwind/) of sample 
+- [Demo ](https://alejandrotapiaq.github.io/angular10-tailwind/) of sample 
 
 
 ## Development server
