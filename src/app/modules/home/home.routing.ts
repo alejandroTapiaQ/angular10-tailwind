@@ -8,7 +8,7 @@ import { SearchCatComponent } from './search-cat/search-cat.component';
 import { TopCatsComponent } from './top-cats/top-cats.component';
 
 const routes: Routes = [
-    { path: '', redirectTo: 'top-cats', component: HomeComponent },
+    { path: '', redirectTo: 'search-cats', component: HomeComponent },
     { path: 'top-cats', component: TopCatsComponent },
     { path: 'search-cats', component: SearchCatComponent },
     { path: 'top-cats/:id', component: DetailCatComponent },

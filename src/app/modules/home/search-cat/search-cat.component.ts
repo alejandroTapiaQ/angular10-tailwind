@@ -26,7 +26,6 @@ export class SearchCatComponent implements OnInit, OnDestroy {
         .pipe(takeUntil(this.onDestroy$))
         .subscribe((cat) => {
           this.catData = cat;
-          console.log(this.catData);
         }, (err) => {
           console.error(err);
         });
